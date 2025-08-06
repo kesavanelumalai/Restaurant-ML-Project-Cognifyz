@@ -1,73 +1,101 @@
-# 🍽️ Restaurant ML Internship Project – Cognifyz Technologies
+# 🍽️ Restaurant ML Project – Cognifyz Technologies Internship
 
-This repository contains hands-on machine learning and data analysis tasks completed as part of my **Machine Learning Internship at Cognifyz Technologies** (Aug 2025). The project involves building intelligent systems using real-world restaurant data for classification, recommendation, prediction, and visualization.
-
----
-
-## 📂 Project Tasks
-
-### 🔢 Task 3 – Cuisine Classification
-**Objective**: Classify the type of cuisine a restaurant serves (e.g., North Indian, Chinese, Fast Food) using structured features.
-
-#### 📊 Workflow:
-- Cleaned the restaurant dataset and handled missing values
-- Extracted the primary cuisine from multiple-cuisine entries
-- Encoded categorical features such as city, currency, etc.
-- Applied **Random Forest Classifier** to predict cuisine
-- Used **SMOTE** to address class imbalance
-- Evaluated using accuracy, precision, recall, F1-score, and confusion matrix
-
-#### ✅ Results:
-- Achieved ~52% model accuracy
-- Performed best on "North Indian" cuisine
-- Key challenges: class imbalance, multiple labels in cuisine field
+This repository showcases the hands-on machine learning and data analysis work I completed during my **Machine Learning Internship at Cognifyz Technologies** (Aug 2025). The project involves solving real-world business problems in the restaurant domain using regression, classification, recommendation systems, and spatial visualization.
 
 ---
 
-### 🗺️ Task 4 – Geospatial Restaurant Visualization
-**Objective**: Visualize restaurant locations and rating patterns on a real-world map.
+## 📌 Tasks Overview
 
-#### 📊 Workflow:
-- Used `Folium` and `Plotly` to create interactive map-based visualizations
-- Plotted restaurant locations using latitude and longitude
-- Color-coded markers based on **aggregate rating**
-- Enabled interactive zooming, popups with restaurant details, and clustering
+### ✅ Task 1 – Restaurant Rating Prediction
+**Objective**: Predict the **aggregate rating** of a restaurant based on various input features.
 
-#### ✅ Results:
-- Created a clean, zoomable map interface to explore restaurant distribution
-- Useful for identifying top-rated restaurant clusters in cities like **New Delhi**
-- Enhanced understanding of geographic trends in restaurant quality
+#### 🔧 Workflow:
+- Preprocessed data by handling null values, encoding categorical variables, and dropping irrelevant columns
+- Selected and trained regression models: **Linear Regression** and **Random Forest Regressor**
+- Evaluated model performance using metrics like **R² score**, **Mean Squared Error (MSE)**, and **Mean Absolute Error (MAE)**
+
+#### 🎯 Results:
+- Best model: **Random Forest Regressor**
+- Accuracy (R²): ~78%
+- Identified key factors influencing restaurant ratings: **price range**, **votes**, **online delivery availability**
+
+---
+
+### ✅ Task 2 – Restaurant Recommendation System
+**Objective**: Build a content-based recommendation system to suggest restaurants based on user preferences.
+
+#### 🔧 Workflow:
+- Cleaned and encoded key categorical variables like `Cuisines`, `City`, and `Price Range`
+- Defined a custom recommendation function using cosine similarity on user-defined preferences (e.g., cuisine type, rating, price)
+- Suggested top 5 matching restaurants for given sample input
+
+#### 🎯 Results:
+- Accurate and context-aware recommendations based on cuisine similarity and rating
+- Enabled filtering by **city**, **budget**, and **preferred cuisines**
+
+---
+
+### ✅ Task 3 – Cuisine Classification
+**Objective**: Build a machine learning model to classify restaurants based on their cuisine type.
+
+#### 🔧 Workflow:
+- Extracted primary cuisine labels from multi-cuisine fields
+- Encoded categorical features (city, delivery options, etc.)
+- Trained a **Random Forest Classifier**
+- Used **SMOTE** to handle class imbalance
+
+#### 📊 Evaluation:
+- Accuracy: ~52%
+- Most accurate for: **North Indian**
+- Metrics: Precision, Recall, F1-Score, Confusion Matrix
+- Challenges: multi-label data and class imbalance
+
+---
+
+### ✅ Task 4 – Geospatial Visualization
+**Objective**: Visualize the geographical distribution of restaurants and their ratings using interactive maps.
+
+#### 🔧 Workflow:
+- Used **Folium** to map restaurants based on latitude and longitude
+- Color-coded markers by **Aggregate Rating**
+- Integrated popups to show restaurant names and ratings
+- Generated an interactive HTML map for exploration
+
+#### 🗺️ Results:
+- Visualized clusters of high-rated restaurants in New Delhi
+- Helped identify geographic trends and business potential zones
 
 ---
 
 ## 🛠️ Tools & Technologies
-- **Languages & Libraries**: Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Plotly, Folium, Imbalanced-learn (SMOTE)
-- **ML Models**: Random Forest (Classification), Feature Engineering
-- **Visualization**: Interactive map (Folium), Data plots (Seaborn/Matplotlib)
+- **Languages & Libraries**: Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Plotly, Folium
+- **ML Techniques**: Regression, Classification, SMOTE, Content-based Filtering
+- **Evaluation Metrics**: R² Score, MSE, MAE, Accuracy, Precision, Recall, F1-Score
+- **Visualization**: Folium (Map), Seaborn & Matplotlib (EDA, Evaluation)
 
 ---
 
 ## 📁 Project Files
-- [`Restaurant_cognifyz.ipynb`](./Restaurant_cognifyz.ipynb): Main implementation notebook
-- [`Dataset.csv`](./Dataset.csv): Cleaned and preprocessed dataset
-- Interactive map HTML (generated from Folium – optionally shared as `.html`)
+- `Restaurant_cognifyz.ipynb` – Main implementation file
+- `Dataset.csv` – Restaurant dataset
+- `rating_map.html` – Interactive map (generated via Folium)
 
 ---
 
-## 💡 Key Learnings
-- Built classification models with real-world noisy and imbalanced data
-- Learned spatial visualization techniques for location-based insights
-- Gained experience in handling categorical variables and encoding
-- Applied practical evaluation metrics and confusion matrix analysis
+## 📚 Key Learnings
+- Applied real-world machine learning workflows: preprocessing → modeling → evaluation → deployment
+- Solved classification, regression, and recommendation problems
+- Gained hands-on experience with SMOTE, Label Encoding, Cosine Similarity, and Geospatial Mapping
 
 ---
 
-## 🎓 Internship Details
-- **Company**: Cognifyz Technologies  
-- **Role**: Machine Learning Intern  
-- **Duration**: August 2025  
-- **Focus**: Real-world application of machine learning, classification, and geospatial visualization
+## 🏢 Internship Info
+**Company**: Cognifyz Technologies  
+**Role**: Machine Learning Intern  
+**Duration**: August 2025  
+**Domain**: Restaurant Industry Data – AI/ML Use Cases
 
 ---
 
-📌 Tags: `#CognifyzTechnologies #MachineLearning #Python #Classification #SMOTE #Folium #DataVisualization #MLInternship #GitHubProjects`
+
+🎯 **Feel free to explore the code, test the models, and clone the repo for learning purposes!**
